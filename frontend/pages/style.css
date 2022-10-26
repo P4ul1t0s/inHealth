@@ -13,10 +13,11 @@ body{
 nav{
     width: 100vw;
     height: 2em;
+    position: sticky;
     padding: 15px;
+    top: 0;
     display: flex;
-    position: fixed;
-    box-shadow: -20px -20px 40px #000000;
+    box-shadow: 0 1em 1em -1em #000;
 }
 
 nav div{
@@ -85,7 +86,7 @@ main{
 }
 
 #title{
-    padding-top: 5em;
+    padding-top: 3em;
     height: 10em;
 }
 
