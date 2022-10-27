@@ -17,6 +17,33 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+#home section{
+    justify-content: flex-start !important;
+}
+
+#wallpaper{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#logoHome{
+    margin: 15px;
+}
+
+#logoHome img{
+    height: 2em;
+}
+
+.link{
+    color: #507888;
+    margin-left: 1em;
+}
+
+.link:hover{
+    font-weight: bold;
+}
+
 nav{
     width: 100vw;
     height: 2em;
@@ -82,15 +109,21 @@ a{
     border-radius: 5px;
 }
 
+#buttons .button:hover{
+    color: #d6dfe1;
+    background-color: #00863F;
+}
+
 main{
     height: 100vh;
     width: 100vw;
     justify-content: center;
 }
 
-#buttons .button:hover{
-    color: #d6dfe1;
-    background-color: #00863F;
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #title{
@@ -106,14 +139,8 @@ main{
     font-weight: 600;
 }
 
-strong{
+#title h1 strong{
     color: #00a335;
-}
-
-section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .service{
