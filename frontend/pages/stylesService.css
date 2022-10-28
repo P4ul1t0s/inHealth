@@ -1,0 +1,15 @@
+nav{
+    height: 2em;
+    width: 100vw;
+    padding: 0.5em;
+}
+
+nav div{
+    height: 100%;
+    width: calc(100% - 1em);
+    background-color: antiquewhite;
+}
+
+nav img{
+    height: 100%;
+}

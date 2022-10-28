@@ -1,0 +1,145 @@
+#home{
+    background-image: url("../img/wallpaperHome.png");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+#home section{
+    justify-content: flex-start !important;
+}
+
+#logoHome{
+    margin: 15px;
+}
+
+#logoHome img{
+    height: 2em;
+}
+
+.link{
+    color: #507888;
+    margin-left: 1em;
+    font-weight: 700;
+}
+
+.link:hover{
+    color: #00a335;
+}
+
+nav{
+    width: 100vw;
+    height: 2em;
+    position: sticky;
+    padding: 15px;
+    top: 0;
+    display: flex;
+    background-color: #FFF;
+    box-shadow: -1em 1em 0.8em -1.2em #000;
+}
+
+nav div{
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+    color: #00a335;
+}
+
+#logo{
+    width: 30%;
+}
+
+#logo img{
+    height: 1.7em;
+}
+
+#logo div{
+    margin-top: 0.6em;
+    margin-left: 0.6em;
+    align-items: center;
+    justify-content: center;
+    color: #8b979f;
+}
+
+#buttons{
+    flex-direction: row-reverse;
+    padding-top: 0.4em;
+    width: 68%;
+}
+
+#buttons a{
+    height: 100%;
+    margin-left: 1.3em;
+    transition: 0.4s;
+}
+
+#buttons a:hover{
+    color: #8b979f;
+}
+
+#buttons li{
+    list-style-type: none;
+    width: fit-content;
+    float: left;
+}
+
+#buttons .button{
+    color: #FFF;
+    background-color: #00a335;
+    padding: 0.3em 0.5em;
+    border-radius: 5px;
+}
+
+#buttons .button:hover{
+    color: #d6dfe1;
+    background-color: #00863F;
+}
+
+main{
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title{
+    padding-top: 2em;
+    height: 10em;
+}
+
+#title h1{
+    color: #507888;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    letter-spacing: 0.07em;
+    font-weight: 600;
+}
+
+#title h1 strong{
+    color: #00a335;
+}
+
+.service{
+    text-align: center;
+    height: 25vw;
+    margin: 2em 5em;
+}
+
+.service h2{
+    margin-top: 0.5em;
+    width: 20vw;
+    height: fit-content;
+    color: #8b979f;
+    font-weight: 500;
+}
+
+.service img{
+    width:15vw;
+    height: 15vw;
+}
