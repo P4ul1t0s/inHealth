@@ -38,10 +38,11 @@ body::-webkit-scrollbar {
 .link{
     color: #507888;
     margin-left: 1em;
+    font-weight: 700;
 }
 
 .link:hover{
-    font-weight: bold;
+    color: #00a335;
 }
 
 nav{
