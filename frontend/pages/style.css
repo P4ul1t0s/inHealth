@@ -17,15 +17,20 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+#home{
+    background-image: url("../img/wallpaperHome.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
 #home section{
     justify-content: flex-start !important;
 }
 
-#wallpaper{
-    position: absolute;
+/* #wallpaper{
     height: 100%;
     width: 100%;
-}
+} */
 
 #logoHome{
     margin: 15px;
