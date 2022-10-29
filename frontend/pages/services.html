@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
         <meta charset="UTF-8">
         <title>inHealth</title>
+        <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+        <script src="../../backend/script.js"></script>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="stylesService.css">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&display=swap" rel="stylesheet">
@@ -11,11 +12,22 @@
     <body>
         <nav>
             <div>
-                <!-- <img src="../img/logoIntelbras.png" alt=""> -->
+                <a href="index.html"><img src="../img/logoInHealth.png" alt="logoInHealth"></a>
             </div>
-            <div>
-
+            <div id="right">
+                <a href="#"><img src="../img/botãoConta.png" alt="botãoConta"></a>
+                <a href="#"><img src="../img/botãoNotificação.png" alt="botãoNotificação"></a>
             </div>
         </nav>
+        <aside>
+            <img src="../img/botãoHome.png" alt="botãoHome" onclick="home()">
+            <img src="../img/botãoRelatório.png" alt="botãoRelatório" onclick="relatorio()">
+        </aside>
+        <main id="home">
+            <h1>HOME</h1>
+        </main>
+        <main id="relatorio">
+            <H1>RELATORIO</H1>
+        </main>
     </body>
 </html>

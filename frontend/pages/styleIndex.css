@@ -71,7 +71,6 @@ a{
 #buttons a{
     height: 100%;
     margin-left: 1.3em;
-    transition: 0.4s;
 }
 
 #buttons a:hover{

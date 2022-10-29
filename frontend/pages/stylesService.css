@@ -1,15 +1,56 @@
 nav{
-    height: 2em;
+    height: 3em;
     width: 100vw;
-    padding: 0.5em;
+    padding: 1em;
+    display: flex;
+    border-bottom: 2px solid #8b979f;
 }
 
 nav div{
     height: 100%;
-    width: calc(100% - 1em);
-    background-color: antiquewhite;
+    width: calc(50% - 1em);
+    display: flex;
+    align-items: center;
 }
 
-nav img{
+div img, div a{
     height: 100%;
+}
+
+#right{
+    flex-direction: row-reverse;
+}
+
+#right a{
+    height: 70%;
+    margin-left: 1em;
+}
+
+aside{
+    padding: 1em;
+    border-right: 2px solid #8b979f;
+    width: 2em;
+    height: 100vh;
+    position: fixed;
+}
+
+aside img{
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+aside img:hover{
+    cursor: pointer;
+}
+
+main{
+    width: calc(100vw - 6em);
+    height: calc(100vh - 7em);
+    position: fixed;
+    left: 5em;
+    top: 6em;
+}
+
+#relatorio{
+    display: none;
 }
