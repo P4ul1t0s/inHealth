@@ -1,15 +1,16 @@
 function toggleMode(){
     const light = "#FFF"
     const lightBorder = "#8b979f"
-    const dark = "#2c2c2c"
-    const darkBorder = "#0E0E0E"
+    const dark = "rgb(52, 52, 52)"
+    const darkBorder = "rgb(22, 22, 22)"
     const body = document.querySelector('#body')
     const navbar = document.querySelector('#navbar')
     const aside = document.querySelector('#aside')
     const darkButton = document.querySelector('.darkButton')
     const lightButton = document.querySelector('.lightButton')
+    console.log(body.style.backgroundColor)
     
-    if(body.style.backgroundColor !== 'rgb(44, 44, 44)'){
+    if(body.style.backgroundColor !== "rgb(52, 52, 52)"){
         darkButton.style.display = 'none'
         lightButton.style.display = 'unset'
         body.style.backgroundColor = dark

@@ -1,7 +1,8 @@
 #home{
-    background-image: url("../img/wallpaperHome.png");
+    background-image: url("../img/wallpaperHome.svg");
     background-repeat: no-repeat;
     background-position: right;
+    background-size: contain;
 }
 
 #home section{
@@ -21,7 +22,7 @@
 }
 
 .link{
-    color: #507888;
+    color: #8b979f;
     margin-left: 1em;
     font-weight: 700;
 }
@@ -117,7 +118,7 @@ section{
 }
 
 #title h1{
-    color: #507888;
+    color: #5d7e8b;
     font-family: 'Raleway', sans-serif;
     text-align: center;
     letter-spacing: 0.07em;
