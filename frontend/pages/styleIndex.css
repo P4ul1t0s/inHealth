@@ -16,6 +16,10 @@
     height: 2em;
 }
 
+#logoHome a img{
+    margin-left: 0.6em;
+}
+
 .link{
     color: #507888;
     margin-left: 1em;

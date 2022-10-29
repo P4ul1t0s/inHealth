@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     font-family: 'Oswald', sans-serif;
-    transition: 0.4s;
+    transition: 0.4s; 
 }
 
 body{
@@ -15,5 +15,14 @@ body{
 }
 
 body::-webkit-scrollbar {
+    display: none;
+}
+
+.lightButton, .darkButton{
+    height: 70%;
+    color: aliceblue;
+}
+
+.lightButton{
     display: none;
 }

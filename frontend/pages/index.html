@@ -4,14 +4,17 @@
         <meta charset="UTF-8">
         <title>inHealth</title>
         <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+        <script src="../../backend/script.js"></script>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="styleIndex.css">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&display=swap" rel="stylesheet">
     </head>
-    <body>
+    <body id="body">
         <main id="home">
             <section>
                 <div id="logoHome">
+                    <img class="darkButton" src="../img/darkMode.svg" alt="darkMode" onclick="toggleMode()">
+                    <img class="lightButton" src="../img/lightMode.svg" alt="lightMode" onclick="toggleMode()">
                     <a href="/frontend/pages/"><img src="../img/logoIntelbras.png" alt="INTELBRAS"></a>
                     <a class="link" href="https://loja.intelbras.com.br/?utm_source=inst&utm_medium=site&utm_campaign=botao-menu-site-institucional" target="_blank">
                         Loja
@@ -22,7 +25,7 @@
                 </div>
             </section>
         </main>
-        <nav>
+        <nav id="navbar">
             <div id="logo">
                 <a href="/frontend/pages/"><img src="../img/logoIntelbras.png" alt="INTELBRAS"></a>
                 <div><h3>inHealth</h3></div>
@@ -48,7 +51,7 @@
                 </div>
                 <div class="service">
                     <a href="#">
-                        <img src="../img/2.svg">
+                        <img id="solua" src="../img/2.svg">
                         <h2>Alerta de postura incorreta</h2>
                     </a>
                 </div>
