@@ -31,6 +31,69 @@
     color: #00a335;
 }
 
+#textoHome{
+    height: calc(100% - 5em - 30px);
+    display: flex;
+    align-items: center;
+}
+
+#titleHome{
+    width: 100%;
+    padding-left: 2em;
+}
+
+#titleHome h1{
+    font-size: 4em;
+    font-weight: 600;
+    color: #00a335;
+}
+
+#titleHome h3{
+    font-size: 1.5em;
+    font-weight: 400;
+    color: #8b979f;
+}
+
+#buttonsHome{
+    margin-top: 2em;
+}
+
+#buttonsHome button{
+    width: 6em;
+    font-size: 1.5em;
+    border-radius: 3px;
+    padding: 0.2em 0 0.2em 0;
+    margin-right: 1em;
+    font-weight: 300;
+    border: 2px solid #00a335;
+    background-color: #00a335;
+    color: #FFF;
+}
+
+#buttonsHome button:first-child{
+    background-color: #FFF;
+    color: #00a335;
+}
+
+footer{
+    width: 100vw;
+    height: 2em;
+}
+
+footer p{
+    margin: 0 0 3em 2em;
+    font-weight: 500;
+    color: #8b979f;
+}
+
+footer a{
+    font-weight: 600;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
 nav{
     width: 100vw;
     height: 2em;
