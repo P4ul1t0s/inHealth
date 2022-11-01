@@ -70,8 +70,12 @@
     color: #FFF;
 }
 
+#buttonsHome button:hover{
+    cursor: pointer;
+}
+
 #buttonsHome button:first-child{
-    background-color: #FFF;
+    background-color: transparent;
     color: #00a335;
 }
 

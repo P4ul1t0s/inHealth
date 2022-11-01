@@ -1,4 +1,15 @@
-function toggleMode(){
+function isLight(color){
+    if(color === "rgb(52, 52, 52)"){
+        return false
+    }else{
+        return true
+    }
+}
+
+    const color = body.style.backgroundColor
+    color.onchange = localStorage.setItem('backGroundColor', color)
+
+function toggleMode(){ 
     const light = "#FFF"
     const lightBorder = "#8b979f"
     const dark = "rgb(52, 52, 52)"
@@ -8,9 +19,8 @@ function toggleMode(){
     const aside = document.querySelector('#aside')
     const darkButton = document.querySelector('.darkButton')
     const lightButton = document.querySelector('.lightButton')
-    console.log(body.style.backgroundColor)
     
-    if(body.style.backgroundColor !== "rgb(52, 52, 52)"){
+    if(isLight(localStorage.getItem('backGroundColor'))){
         darkButton.style.display = 'none'
         lightButton.style.display = 'unset'
         body.style.backgroundColor = dark
@@ -41,4 +51,8 @@ function relatorio(){
     const relatorio = document.querySelector('#relatorio')
     home.style.display = 'none'
     relatorio.style.display = 'flex'
+}
+
+function teste(){
+    console.log("1300")
 }
