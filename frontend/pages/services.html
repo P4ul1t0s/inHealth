@@ -16,15 +16,15 @@
                 <a href="index.html"><img src="../img/logoInHealth.png" alt="logoInHealth"></a>
             </div>
             <div id="right">
-                <a href="#"><img src="../img/botãoConta.png" alt="botãoConta" onclick="lightMode()"></a>
+                <a href="#"><img src="../img/botãoConta.png" alt="botãoConta"></a>
                 <a href="#"><img src="../img/botãoNotificação.png" alt="botãoNotificação"></a>
-                <img class="darkButton" src="../img/darkMode.svg" alt="darkMode" onclick="toggleMode()">
-                <img class="lightButton" src="../img/lightMode.svg" alt="lightMode" onclick="toggleMode()">
+                <img class="darkButton" src="../img/darkMode.svg" alt="darkMode" onclick="toggleMode('dark')">
+                <img class="lightButton" src="../img/lightMode.svg" alt="lightMode" onclick="toggleMode('light')">
             </div>
         </nav>
         <aside id="aside">
-            <img src="../img/botãoHome.png" alt="botãoHome" onclick="home()">
-            <img src="../img/botãoRelatório.png" alt="botãoRelatório" onclick="relatorio()">
+            <img src="../img/botãoHome.png" alt="botãoHome" onclick="setHome()">
+            <img src="../img/botãoRelatório.png" alt="botãoRelatório" onclick="setRelatorio()">
         </aside>
         <main id="home">
             <h1>HOME</h1>
@@ -32,5 +32,6 @@
         <main id="relatorio">
             <H1>RELATORIO</H1>
         </main>
+        <script src="../../backend/script.js"></script>
     </body>
 </html>

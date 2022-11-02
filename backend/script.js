@@ -1,26 +1,25 @@
-function isLight(color){
-    if(color === "rgb(52, 52, 52)"){
-        return false
-    }else{
-        return true
-    }
+var light = "#FFF"
+var lightBorder = "#8b979f"
+var dark = "rgb(52, 52, 52)"
+var darkBorder = "rgb(22, 22, 22)"
+var body = document.querySelector('#body')
+var navbar = document.querySelector('#navbar')
+var aside = document.querySelector('#aside')
+var darkButton = document.querySelector('.darkButton')
+var lightButton = document.querySelector('.lightButton')
+var home = document.querySelector('#home')
+var relatorio = document.querySelector('#relatorio')
+
+if(!localStorage.getItem('theme')){
+    localStorage.setItem('theme', body.style.backgroundColor);
 }
 
-    const color = body.style.backgroundColor
-    color.onchange = localStorage.setItem('backGroundColor', color)
+toggleMode(localStorage.getItem('theme'));
 
-function toggleMode(){ 
-    const light = "#FFF"
-    const lightBorder = "#8b979f"
-    const dark = "rgb(52, 52, 52)"
-    const darkBorder = "rgb(22, 22, 22)"
-    const body = document.querySelector('#body')
-    const navbar = document.querySelector('#navbar')
-    const aside = document.querySelector('#aside')
-    const darkButton = document.querySelector('.darkButton')
-    const lightButton = document.querySelector('.lightButton')
+function toggleMode(mode){
+    localStorage.setItem('theme', mode)
     
-    if(isLight(localStorage.getItem('backGroundColor'))){
+    if(localStorage.getItem('theme') === 'dark'){
         darkButton.style.display = 'none'
         lightButton.style.display = 'unset'
         body.style.backgroundColor = dark
@@ -39,20 +38,12 @@ function toggleMode(){
     }
 }
 
-function home(){
-    const home = document.querySelector('#home')
-    const relatorio = document.querySelector('#relatorio')
+function setHome(){
     home.style.display = 'flex'
     relatorio.style.display = 'none'
 }
 
-function relatorio(){
-    const home = document.querySelector('#home')
-    const relatorio = document.querySelector('#relatorio')
+function setRelatorio(){
     home.style.display = 'none'
     relatorio.style.display = 'flex'
-}
-
-function teste(){
-    console.log("1300")
 }

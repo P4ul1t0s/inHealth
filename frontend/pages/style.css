@@ -13,6 +13,7 @@ body{
     scrollbar-width: none;
     overflow-y: scroll;
     overflow-x: hidden;
+    background-color: #FFF;
 }
 
 body::-webkit-scrollbar {
