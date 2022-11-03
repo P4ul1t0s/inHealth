@@ -5,19 +5,19 @@
     background-size: contain;
 }
 
-#home section{
-    justify-content: flex-start !important;
+#home section:first-child{
+    justify-content: space-between;
 }
 
-#logoHome{
+#logoHome, #themeButtonHome{
     margin: 15px;
 }
 
-#logoHome img{
+#logoHome img, #themeButtonHome img{
     height: 2em;
 }
 
-#logoHome a img{
+#logoHome a img, #themeButtonHome a img{
     margin-left: 0.6em;
 }
 
