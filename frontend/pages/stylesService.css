@@ -27,16 +27,17 @@ div img, div a{
 }
 
 aside{
-    padding: 1em;
     border-right: 2px solid #8b979f;
-    width: 2em;
+    width: 3em;
     height: 100vh;
     position: fixed;
+    padding: 0.5em;
 }
 
 aside img{
-    width: 100%;
-    margin-bottom: 1em;
+    width: 2em;
+    padding: 0.5em;
+    border-radius: 5px;
 }
 
 aside img:hover{

@@ -9,6 +9,8 @@ var darkButton = document.querySelector('.darkButton')
 var lightButton = document.querySelector('.lightButton')
 var home = document.querySelector('#home')
 var relatorio = document.querySelector('#relatorio')
+var homeButton = document.querySelector('#homeButton')
+var relatorioButton = document.querySelector('#relatorioButton')
 
 if(!localStorage.getItem('theme')){
     localStorage.setItem('theme', body.style.backgroundColor);
