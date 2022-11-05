@@ -18,6 +18,11 @@ var botãoHome = document.querySelector('#botãoHome')
 var botãoPostura = document.querySelector('#botãoPostura')
 var botãoAlertas = document.querySelector('#botãoAlertas')
 var botãoConfig = document.querySelector('#botãoConfig')
+var infoSensor = document.querySelector('#infoSensor')
+var infoStatus = document.querySelector('#infoStatus')
+var infoDistAtual = document.querySelector('#infoDistAtual')
+var infoDistIdeal = document.querySelector('#infoDistIdeal')
+var sensorNome, sensorStatus = 'Status: ', sensorDistAtual = 'Distância atual: ', sensorDistIdeal = 'Distância recomendada: '
 
 if(!localStorage.getItem('theme')){
     localStorage.setItem('theme', body.style.backgroundColor);
@@ -83,8 +88,42 @@ function setAllNone(){
 }
 
 function analiseDeSensor(local){
-    alert(local)
-    if(local === 'pescocoCorreta'){
-        
+    limpaInfos()
+    switch(local){
+        case 'pescocoCorreta':
+            sensorNome = 'Pescoço/Cabeça'
+            sensorStatus += 'Postura correta'
+            sensorDistAtual += '~9cm'
+            sensorDistIdeal += '0-10cm'
+        break;
+        case 'costasCorreta':
+            sensorNome = 'Costas'
+            sensorStatus += 'Postura correta'
+            sensorDistAtual += '~0cm'
+            sensorDistIdeal += '0cm'
+        break;
+        case 'lombarEsquerdaCorreta':
+            sensorNome = 'Lombar Esquerda'
+            sensorStatus += 'Postura correta'
+            sensorDistAtual += '~4cm'
+            sensorDistIdeal += '0-5cm'
+        break;
+        case 'lombarDireitaCorreta':
+            sensorNome = 'Lombar Direita'
+            sensorStatus += 'Postura correta'
+            sensorDistAtual += '~2cm'
+            sensorDistIdeal += '0-5cm'
+        break;
     }
+
+    infoSensor.innerHTML = `Monitorando sensor ${sensorNome}`
+    infoStatus.innerHTML = sensorStatus
+    infoDistAtual.innerHTML = sensorDistAtual
+    infoDistIdeal.innerHTML = sensorDistIdeal
+}
+
+function limpaInfos(){
+    sensorStatus = 'Status: '
+    sensorDistAtual = 'Distância atual: '
+    sensorDistIdeal = 'Distância recomendada: '
 }

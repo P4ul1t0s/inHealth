@@ -155,7 +155,7 @@ main{
 }
 
 #info #center{
-    height: calc(100% - 7em);
+    height: calc(100% - 1em);
     display: flex;
     align-items: center;
 }
