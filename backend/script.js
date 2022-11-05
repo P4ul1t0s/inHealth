@@ -9,8 +9,10 @@ var darkButton = document.querySelector('.darkButton')
 var lightButton = document.querySelector('.lightButton')
 var home = document.querySelector('#home')
 var relatorio = document.querySelector('#relatorio')
-var homeButton = document.querySelector('#homeButton')
-var relatorioButton = document.querySelector('#relatorioButton')
+var home = document.querySelector('#home')
+var postura = document.querySelector('#postura')
+var alertas = document.querySelector('#alertas')
+var config = document.querySelector('#config')
 
 if(!localStorage.getItem('theme')){
     localStorage.setItem('theme', body.style.backgroundColor);
@@ -41,11 +43,32 @@ function toggleMode(mode){
 }
 
 function setHome(){
-    home.style.display = 'flex'
-    relatorio.style.display = 'none'
+    setAllNone()
+    home.style.display = 'block'
 }
 
-function setRelatorio(){
+function setPostura(){
+    setAllNone()
+    postura.style.display = 'block'
+}
+
+function setAlertas(){
+    setAllNone()
+    alertas.style.display = 'block'
+}
+
+function setConfig(){
+    setAllNone()
+    config.style.display = 'block'
+}
+
+function setAllNone(){
     home.style.display = 'none'
-    relatorio.style.display = 'flex'
+    postura.style.display = 'none'
+    alertas.style.display = 'none'
+    config.style.display = 'none'
+}
+
+function posturaIncorreta(local){
+    alert(local)
 }
