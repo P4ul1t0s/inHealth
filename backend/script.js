@@ -13,6 +13,7 @@ var home = document.querySelector('#home')
 var postura = document.querySelector('#postura')
 var alertas = document.querySelector('#alertas')
 var config = document.querySelector('#config')
+var infoPostura = document.querySelector('#info')
 
 if(!localStorage.getItem('theme')){
     localStorage.setItem('theme', body.style.backgroundColor);
@@ -69,6 +70,9 @@ function setAllNone(){
     config.style.display = 'none'
 }
 
-function posturaIncorreta(local){
+function analiseDeSensor(local){
     alert(local)
+    if(local === 'pescocoCorreta'){
+        infoPostura.className.backgroundColor = "red"
+    }
 }

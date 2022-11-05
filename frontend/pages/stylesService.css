@@ -58,7 +58,7 @@ main{
     color: #00a335;
 }
 
-#homeContent{
+.content{
     height: calc(100% - 5em);
     width: 100%;
     display: flex;
@@ -66,13 +66,20 @@ main{
     align-items: center;
 }
 
-#homeContent #grid, #homeContent #graph{
+.left, .right{
     height: 90%;
     width: 50%;
 }
 
-#homeContent #grid{
+.left{
     padding-right: 0.5em;
+}
+
+.right{
+    padding-left: 0.5em;
+}
+
+#homeContent #grid{
     display: grid;
     grid-template-columns: calc(50% - 0.5em) calc(50% - 0.5em);
     grid-template-rows: calc(50% - 0.5em) calc(50% - 0.5em);
@@ -110,7 +117,6 @@ main{
 }
 
 #homeContent #graph{
-    padding-left: 0.5em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -123,7 +129,38 @@ main{
     border-radius: 4px;
 }
 
-#postura, #alertas, #config{
+#posturaContent svg{
+    height: 100%;
+}
+
+.indicador:hover{
+    cursor: pointer;
+}
+
+#model{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 1em;
+}
+
+#info{
+    background-color: #00000020;
+    border-radius: 8px;
+    padding: 1em;
+}
+
+#info h2{
+    height: 1em;
+}
+
+#info #center{
+    height: calc(100% - 7em);
+    display: flex;
+    align-items: center;
+}
+
+#home, #alertas, #config{
     display: none;
 }
 
