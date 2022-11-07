@@ -11,7 +11,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     </head>
     <body id="body">
-        <main id="home">
+        <main id="homePage">
             <section>
                 <div id="logoHome">
                     <a href="/frontend/pages/"><img src="../img/logoIntelbras.png" alt="INTELBRAS"></a>
@@ -38,50 +38,8 @@
                 </div>
             </div>
             <footer>
-                <p>Conheça mais <a href="#navbar">aqui</a></p>
+                <p>Conheça mais <a href="home.html">aqui</a></p>
             </footer>
-        </main>
-        <nav id="navbar">
-            <div id="logo">
-                <a href="/frontend/pages/"><img src="../img/logoIntelbras.png" alt="INTELBRAS"></a>
-                <div><h3>inHealth</h3></div>
-            </div>
-            <div id="buttons">
-                <ul>
-                    <li><a href="#">Entrar como admin</a></li>
-                    <li><a href="#" onclick="redirectToSetDashboard('botãoHome', 'home')">Entrar</a></li>
-                    <li><a href="#" class="button" id="button">Criar cadastro</a></li>
-                </ul>
-            </div>
-        </nav>
-        <main>
-            <section id="title">
-                <h1>Conheça as funcionalidades<br>do <strong>inHealth</strong></h1>
-            </section>
-            <section>
-                <div class="service" onclick="redirectToSetDashboard('botãoAlertas', 'alertas')">
-                    <figure><img src="../img/1.svg">
-                    <h2>Alerta de hidratação</h2>
-                </div>
-                <div class="service" onclick="redirectToSetDashboard('botãoPostura', 'postura')">
-                    <img id="solua" src="../img/2.svg">
-                    <h2>Alerta de postura incorreta</h2>
-                </div>
-                <div class="service" onclick="redirectToSetDashboard('botãoAlertas', 'alertas')">
-                    <img src="../img/3.svg">
-                    <h2>Alerta para horário de exercícios</h2>
-                </div>
-            </section>
-            <section>
-                <div class="service" onclick="redirectToSetDashboard('botãoAlertas', 'alertas')">
-                    <img src="../img/4.svg">
-                    <h2>Alerta para horário de descanso</h2>
-                </div>
-                <div class="service" onclick="redirectToSetDashboard('botãoHome', 'home')">
-                    <img src="../img/5.svg">
-                    <h2>Relatórios semanais, mensais e anuais</h2>
-                </div>
-            </section>
         </main>
         <script src="../../backend/script.js"></script>
     </body>
