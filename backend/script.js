@@ -9,26 +9,33 @@ var darkButton = document.querySelector('.darkButton')
 var lightButton = document.querySelector('.lightButton')
 var home = document.querySelector('#home')
 var relatorio = document.querySelector('#relatorio')
-var home = document.querySelector('#home')
-var postura = document.querySelector('#postura')
-var alertas = document.querySelector('#alertas')
-var config = document.querySelector('#config')
 var infoPostura = document.querySelector('#info')
-var botãoHome = document.querySelector('#botãoHome')
-var botãoPostura = document.querySelector('#botãoPostura')
-var botãoAlertas = document.querySelector('#botãoAlertas')
-var botãoConfig = document.querySelector('#botãoConfig')
 var infoSensor = document.querySelector('#infoSensor')
 var infoStatus = document.querySelector('#infoStatus')
 var infoDistAtual = document.querySelector('#infoDistAtual')
 var infoDistIdeal = document.querySelector('#infoDistIdeal')
 var sensorNome, sensorStatus = 'Status: ', sensorDistAtual = 'Distância atual: ', sensorDistIdeal = 'Distância recomendada: '
 
+if(localStorage.getItem('button')){
+    setDashboard(localStorage.getItem('button'), localStorage.getItem('dashboard'))
+}
+
 if(!localStorage.getItem('theme')){
     localStorage.setItem('theme', body.style.backgroundColor);
 }
 
 toggleMode(localStorage.getItem('theme'));
+
+function setAllNone(){
+    home.style.display = 'none'
+    postura.style.display = 'none'
+    alertas.style.display = 'none'
+    config.style.display = 'none'
+    botãoHome.style.backgroundColor = 'transparent'
+    botãoPostura.style.backgroundColor = 'transparent'
+    botãoAlertas.style.backgroundColor = 'transparent'
+    botãoConfig.style.backgroundColor = 'transparent'
+}
 
 function toggleMode(mode){
     localStorage.setItem('theme', mode)
@@ -52,39 +59,18 @@ function toggleMode(mode){
     }
 }
 
-function setHome(){
-    setAllNone()
-    botãoHome.style.backgroundColor = '#00000020';
-    home.style.display = 'block'
+function redirectToSetDashboard(button, dashboard){
+    localStorage.setItem('button', button);
+    localStorage.setItem('dashboard', dashboard);
+    window.location.replace('services.html')
 }
 
-function setPostura(){
+function setDashboard(button, dashboard){
     setAllNone()
-    botãoPostura.style.backgroundColor = '#00000020';
-    postura.style.display = 'block'
-}
-
-function setAlertas(){
-    setAllNone()
-    botãoAlertas.style.backgroundColor = '#00000020';
-    alertas.style.display = 'block'
-}
-
-function setConfig(){
-    setAllNone()
-    botãoConfig.style.backgroundColor = '#00000020';
-    config.style.display = 'block'
-}
-
-function setAllNone(){
-    home.style.display = 'none'
-    postura.style.display = 'none'
-    alertas.style.display = 'none'
-    config.style.display = 'none'
-    botãoHome.style.backgroundColor = 'transparent'
-    botãoPostura.style.backgroundColor = 'transparent'
-    botãoAlertas.style.backgroundColor = 'transparent'
-    botãoConfig.style.backgroundColor = 'transparent'
+    button = document.querySelector(`#${button}`)
+    dashboard = document.querySelector(`#${dashboard}`)
+    button.style.backgroundColor = '#00000020';
+    dashboard.style.display = 'block'
 }
 
 function analiseDeSensor(local){

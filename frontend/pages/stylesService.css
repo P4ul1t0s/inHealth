@@ -40,6 +40,10 @@ aside img{
     border-radius: 5px;
 }
 
+aside #botãoHome{
+    background-color: #00000020;
+}
+
 aside img:hover{
     cursor: pointer;
 }
@@ -160,11 +164,11 @@ main{
     align-items: center;
 }
 
-#home, #alertas, #config{
+#postura, #alertas, #config{
     display: none;
 }
 
-/* .pescocoCorreta{
+.pescocoCorreta{
     display: none;
 }
 
@@ -178,4 +182,4 @@ main{
 
 .lombarDireitaCorreta{
     display: none;
-} */
+}
