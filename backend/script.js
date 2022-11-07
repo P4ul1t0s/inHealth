@@ -59,6 +59,15 @@ function toggleMode(mode){
     }
 }
 
+function testeMode(theme){
+    alert(theme)
+    const root = document.documentElement;
+    if(theme === "dark"){
+        root.style.setProperty('--backgruoundColor', `var(--cinzaEscuro)`);
+    }
+
+}
+
 function redirectToSetDashboard(button, dashboard){
     localStorage.setItem('button', button);
     localStorage.setItem('dashboard', dashboard);
