@@ -4,40 +4,24 @@ var darkButton = document.querySelector('.darkButton')
 var lightButton = document.querySelector('.lightButton')
 var home = document.querySelector('#home')
 var relatorio = document.querySelector('#relatorio')
-var infoPostura = document.querySelector('#info')
-var infoSensor = document.querySelector('#infoSensor')
-var infoStatus = document.querySelector('#infoStatus')
-var infoDistAtual = document.querySelector('#infoDistAtual')
-var infoDistIdeal = document.querySelector('#infoDistIdeal')
-var sensorNome, sensorStatus = 'Status: ', sensorDistAtual = 'Distância atual: ', sensorDistIdeal = 'Distância recomendada: '
+var infoStatusSensorPescoco = document.querySelector('#sensor1Strong')
+var infoDistAtualSensorPescoco = document.querySelector('#infoDistAtualSensorPescoco')
+var infoDistIdealSensorPescoco = document.querySelector('#infoDistIdealSensorPescoco')
+var infoStatuSensorCostass = document.querySelector('#sensor2Strong')
+var infoDistAtualSensorCostas = document.querySelector('#infoDistAtualSensorCostas')
+var infoDistIdealSensorCostas = document.querySelector('#infoDistIdealSensorCostas')
+var infoStatusSensorLombarD = document.querySelector('#sensor3Strong')
+var infoDistAtualSensorLombarD = document.querySelector('#infoDistAtualSensorLombarD')
+var infoDistIdealSensorLombarD = document.querySelector('#infoDistIdealSensorLombarD')
+var infoStatusSensorLombarE = document.querySelector('#sensor4Strong')
+var infoDistAtualSensorLombarE = document.querySelector('#infoDistAtualSensorLombarE')
+var infoDistIdealSensorLombarE = document.querySelector('#infoDistIdealSensorLombarE')
 
 if(!localStorage.getItem('theme')){
     localStorage.setItem('theme', body.style.backgroundColor);
 }
 
 toggleMode(localStorage.getItem('theme'));
-
-// function toggleMode(mode){
-//     localStorage.setItem('theme', mode)
-    
-//     if(localStorage.getItem('theme') === 'dark'){
-//         darkButton.style.display = 'none'
-//         lightButton.style.display = 'unset'
-//         body.style.backgroundColor = dark
-//         body.style.color = lightBorder
-//         navbar.style.backgroundColor = dark
-//         navbar.style.borderColor = darkBorder
-//         aside.style.borderColor = darkBorder
-//     }else{
-//         darkButton.style.display = 'unset'
-//         lightButton.style.display = 'none'
-//         body.style.backgroundColor = light
-//         body.style.color = dark
-//         navbar.style.backgroundColor = light
-//         navbar.style.borderColor = lightBorder
-//         aside.style.borderColor = lightBorder
-//     }
-// }
 
 function toggleMode(theme){
     localStorage.setItem('theme', theme)
@@ -91,43 +75,60 @@ function setAllNone(){
     botãoConfig.style.backgroundColor = 'transparent'
 }
 
-function analiseDeSensor(local){
-    limpaInfos()
-    switch(local){
-        case 'pescocoCorreta':
-            sensorNome = 'Pescoço/Cabeça'
-            sensorStatus += 'Postura correta'
-            sensorDistAtual += '~9cm'
-            sensorDistIdeal += '0-10cm'
-        break;
-        case 'costasCorreta':
-            sensorNome = 'Costas'
-            sensorStatus += 'Postura correta'
-            sensorDistAtual += '~0cm'
-            sensorDistIdeal += '0cm'
-        break;
-        case 'lombarEsquerdaCorreta':
-            sensorNome = 'Lombar Esquerda'
-            sensorStatus += 'Postura correta'
-            sensorDistAtual += '~4cm'
-            sensorDistIdeal += '0-5cm'
-        break;
-        case 'lombarDireitaCorreta':
-            sensorNome = 'Lombar Direita'
-            sensorStatus += 'Postura correta'
-            sensorDistAtual += '~2cm'
-            sensorDistIdeal += '0-5cm'
-        break;
+function analiseDeSensor(sensor1, sensor2, sensor3, sensor4){
+    infoStatusSensorPescoco.innerHTML = `${verificaPostura(sensor1)}`
+    infoDistAtualSensorPescoco.innerHTML = `Distância atual: ${sensor1.distanciaAtual}cm`
+    infoDistIdealSensorPescoco.innerHTML = "Distância ideal: 0-10cm"
+
+    infoStatuSensorCostass.innerHTML = `${verificaPostura(sensor2)}`
+    infoDistAtualSensorCostas.innerHTML = `Distância atual: ${sensor2.distanciaAtual}cm`
+    infoDistIdealSensorCostas.innerHTML = "Distância ideal: 0cm"
+
+    infoStatusSensorLombarD.innerHTML = `${verificaPostura(sensor3)}`
+    infoDistAtualSensorLombarD.innerHTML = `Distância atual: ${sensor3.distanciaAtual}cm`
+    infoDistIdealSensorLombarD.innerHTML = "Distância ideal: 0-5cm"
+
+    infoStatusSensorLombarE.innerHTML = `${verificaPostura(sensor4)}`
+    infoDistAtualSensorLombarE.innerHTML = `Distância atual: ${sensor4.distanciaAtual}cm`
+    infoDistIdealSensorLombarE.innerHTML = "Distância ideal: 0-5cm"
+}
+
+function verificaPostura(sensor){
+    if(sensor.distanciaAtual <= sensor.distanciaIdeal){
+        return "Correta"
+    }else{
+        var sensorAtual = document.querySelector(`.${sensor.nome}`)
+        sensorAtual.style.display = 'none';
+        var sensorAtualM = document.querySelector(`.${sensor.nome}M`)
+        sensorAtualM.style.display = 'none';
+        var strong = document.querySelector(`#${sensor.nome}Strong`)
+        strong.style.color = 'rgb(255, 0, 0)';
+        return "Incorreta"
     }
-
-    infoSensor.innerHTML = `Monitorando sensor ${sensorNome}`
-    infoStatus.innerHTML = sensorStatus
-    infoDistAtual.innerHTML = sensorDistAtual
-    infoDistIdeal.innerHTML = sensorDistIdeal
 }
 
-function limpaInfos(){
-    sensorStatus = 'Status: '
-    sensorDistAtual = 'Distância atual: '
-    sensorDistIdeal = 'Distância recomendada: '
+var sensor1 = {
+    nome: 'sensor1',
+    distanciaAtual: 23,
+    distanciaIdeal: 10
 }
+
+var sensor2 = {
+    nome: 'sensor2',
+    distanciaAtual: 0,
+    distanciaIdeal: 0
+}
+
+var sensor3 = {
+    nome: 'sensor3',
+    distanciaAtual: 0,
+    distanciaIdeal: 5
+}
+
+var sensor4 = {
+    nome: 'sensor4',
+    distanciaAtual: 15,
+    distanciaIdeal: 5
+}
+
+analiseDeSensor(sensor1, sensor2, sensor3, sensor4)
