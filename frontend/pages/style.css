@@ -1,12 +1,12 @@
 :root{
     --verdeIntelbras: #00a335;
     --cinzaClaro: #8b979f; 
-    --cinzaEscuro: #5d7e8b;
+    --cinzaEscuro: #343434;
     --preto: #222;
     --branco: #FFF;
 
     --backgruoundColor: var(--branco);
-    --borderColor: var(--preto);
+    --borderColor: var(--cinzaEscuro);
     --fontColor: var(--cinzaClaro);
 }
 

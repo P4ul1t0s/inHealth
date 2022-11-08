@@ -1,3 +1,15 @@
+:root{
+    --verdeIntelbras: #00a335;
+    --cinzaClaro: #8b979f; 
+    --cinzaEscuro: #343434;
+    --preto: #222;
+    --branco: #FFF;
+
+    --backgruoundColor: var(--branco);
+    --borderColor: var(--cinzaEscuro);
+    --fontColor: var(--cinzaClaro);
+}
+
 nav{
     width: 100vw;
     height: 2em;
@@ -5,8 +17,8 @@ nav{
     padding: 15px;
     top: 0;
     display: flex;
-    background-color: #FFF;
-    box-shadow: -1em 1em 0.8em -1.2em #000;
+    background-color: var(--backgruoundColor);
+    box-shadow: -1em 1em 0.8em -1.2em var(--preto);
 }
 
 nav div{

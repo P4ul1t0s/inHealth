@@ -1,10 +1,5 @@
-var light = "#FFF"
-var lightBorder = "#8b979f"
-var dark = "rgb(52, 52, 52)"
-var darkBorder = "rgb(22, 22, 22)"
-var body = document.querySelector('#body')
-var navbar = document.querySelector('#navbar')
-var aside = document.querySelector('#aside')
+var root = document.documentElement;
+var backgruoundColor, borderColor, fontColor;
 var darkButton = document.querySelector('.darkButton')
 var lightButton = document.querySelector('.lightButton')
 var home = document.querySelector('#home')
@@ -16,56 +11,59 @@ var infoDistAtual = document.querySelector('#infoDistAtual')
 var infoDistIdeal = document.querySelector('#infoDistIdeal')
 var sensorNome, sensorStatus = 'Status: ', sensorDistAtual = 'Distância atual: ', sensorDistIdeal = 'Distância recomendada: '
 
-if(localStorage.getItem('button')){
-    setDashboard(localStorage.getItem('button'), localStorage.getItem('dashboard'))
-}
-
 if(!localStorage.getItem('theme')){
     localStorage.setItem('theme', body.style.backgroundColor);
 }
 
 toggleMode(localStorage.getItem('theme'));
 
-function setAllNone(){
-    home.style.display = 'none'
-    postura.style.display = 'none'
-    alertas.style.display = 'none'
-    config.style.display = 'none'
-    botãoHome.style.backgroundColor = 'transparent'
-    botãoPostura.style.backgroundColor = 'transparent'
-    botãoAlertas.style.backgroundColor = 'transparent'
-    botãoConfig.style.backgroundColor = 'transparent'
-}
-
-function toggleMode(mode){
-    localStorage.setItem('theme', mode)
+// function toggleMode(mode){
+//     localStorage.setItem('theme', mode)
     
-    if(localStorage.getItem('theme') === 'dark'){
+//     if(localStorage.getItem('theme') === 'dark'){
+//         darkButton.style.display = 'none'
+//         lightButton.style.display = 'unset'
+//         body.style.backgroundColor = dark
+//         body.style.color = lightBorder
+//         navbar.style.backgroundColor = dark
+//         navbar.style.borderColor = darkBorder
+//         aside.style.borderColor = darkBorder
+//     }else{
+//         darkButton.style.display = 'unset'
+//         lightButton.style.display = 'none'
+//         body.style.backgroundColor = light
+//         body.style.color = dark
+//         navbar.style.backgroundColor = light
+//         navbar.style.borderColor = lightBorder
+//         aside.style.borderColor = lightBorder
+//     }
+// }
+
+function toggleMode(theme){
+    localStorage.setItem('theme', theme)
+
+    if(theme === "dark"){
+        backgruoundColor = "--cinzaEscuro"
+        borderColor = "--preto"
+        fontColor = "--cinzaClaro"
         darkButton.style.display = 'none'
         lightButton.style.display = 'unset'
-        body.style.backgroundColor = dark
-        body.style.color = lightBorder
-        navbar.style.backgroundColor = dark
-        navbar.style.borderColor = darkBorder
-        aside.style.borderColor = darkBorder
-    }else{
+    }else if(theme === "light"){
+        backgruoundColor = "--branco"
+        borderColor = "--cinzaEscuro"
+        fontColor = "--preto"
         darkButton.style.display = 'unset'
         lightButton.style.display = 'none'
-        body.style.backgroundColor = light
-        body.style.color = dark
-        navbar.style.backgroundColor = light
-        navbar.style.borderColor = lightBorder
-        aside.style.borderColor = lightBorder
     }
+    // console.log(theme, backgruoundColor, borderColor, fontColor, localStorage.getItem('theme'))
+    root.style.setProperty('--backgruoundColor', `var(${backgruoundColor})`);
+    root.style.setProperty('--borderColor', `var(${borderColor})`);
+    root.style.setProperty('--fontColor', `var(${fontColor})`);
+
 }
 
-function testeMode(theme){
-    alert(theme)
-    const root = document.documentElement;
-    if(theme === "dark"){
-        root.style.setProperty('--backgruoundColor', `var(--cinzaEscuro)`);
-    }
-
+if(localStorage.getItem('button')){
+    setDashboard(localStorage.getItem('button'), localStorage.getItem('dashboard'))
 }
 
 function redirectToSetDashboard(button, dashboard){
@@ -80,6 +78,17 @@ function setDashboard(button, dashboard){
     dashboard = document.querySelector(`#${dashboard}`)
     button.style.backgroundColor = '#00000020';
     dashboard.style.display = 'block'
+}
+
+function setAllNone(){
+    home.style.display = 'none'
+    postura.style.display = 'none'
+    alertas.style.display = 'none'
+    config.style.display = 'none'
+    botãoHome.style.backgroundColor = 'transparent'
+    botãoPostura.style.backgroundColor = 'transparent'
+    botãoAlertas.style.backgroundColor = 'transparent'
+    botãoConfig.style.backgroundColor = 'transparent'
 }
 
 function analiseDeSensor(local){
