@@ -18,7 +18,7 @@ nav{
     top: 0;
     display: flex;
     background-color: var(--backgruoundColor);
-    box-shadow: -1em 1em 0.8em -1.2em var(--preto);
+    box-shadow: -1em 1em 0.5em -1.2em var(--preto);
 }
 
 nav div{

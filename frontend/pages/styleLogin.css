@@ -10,24 +10,3 @@
     --fontColor: var(--cinzaClaro);
 }
 
-body{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-section{
-    padding: 1em;
-    border-radius: 5px;
-    box-shadow: 0.4em 0.4em 1em;
-}
-
-p{
-    font-size: 1.2em;
-    margin: 1em 0;
-}
-
-input{
-    font-size: 1em;
-}
