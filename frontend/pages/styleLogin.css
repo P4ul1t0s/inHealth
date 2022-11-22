@@ -10,3 +10,57 @@
     --fontColor: var(--cinzaClaro);
 }
 
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../img/wallpaperLogin.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    top: 50%;
+    right: -10%;
+}
+
+input{
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: transparent;
+    background-size: 1.2em;
+    background-clip: padding-box;
+    border: unset;
+    border-bottom: 2px solid var(--borderColor);
+    font-size: 1em;
+    padding: 0.5em 0;
+    width: 100%;
+}
+
+#email{
+    background-image: url("../img/emailIcon.png");
+}
+
+#password{
+    background-image: url("../img/passwordIcon.png");
+}
+
+section{
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    
+}
+
+h1{
+    margin-bottom: 0.5em;
+}
+
+#inputs{
+    margin: 2em 0;
+}
+
+#inputs p{
+    text-align: right;
+}
+
+#buttons button{
+    width: calc(50% - 0.5em);
+}
