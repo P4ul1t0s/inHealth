@@ -20,6 +20,70 @@ body{
     right: -10%;
 }
 
+nav{
+    width: 100vw;
+    height: 2em;
+    position: absolute;
+    padding: 15px;
+    top: 0;
+    display: flex;
+    background-color: var(--backgruoundColor);
+    box-shadow: -1em 1em 0.5em -1.2em var(--preto);
+}
+
+nav div{
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+    color: var(--fontColor);
+}
+
+#logo{
+    width: 30%;
+}
+
+#logo img{
+    height: 1.7em;
+}
+
+#logo div{
+    margin-top: 0.6em;
+    margin-left: 0.6em;
+    align-items: center;
+    justify-content: center;
+    color: #8b979f;
+}
+
+#buttons{
+    flex-direction: row-reverse;
+    padding-top: 0.4em;
+    width: 68%;
+}
+
+#buttons a{
+    height: 100%;
+    margin-left: 1.3em;
+}
+
+#buttons a:hover{
+    color: #8b979f;
+}
+
+#buttons li{
+    list-style-type: none;
+    width: fit-content;
+    float: left;
+}
+
+#buttons img{
+    height: 2em;
+    align-self: center;
+    margin-left: 1em;
+    padding-bottom: 0.4em;
+}
+
 input{
     background-repeat: no-repeat;
     background-position: right;
@@ -27,7 +91,7 @@ input{
     background-size: 1.2em;
     background-clip: padding-box;
     border: unset;
-    border-bottom: 2px solid var(--borderColor);
+    border-bottom: 2px solid var(--cinzaClaro);
     font-size: 1em;
     padding: 0.5em 0;
     width: 100%;
@@ -41,12 +105,19 @@ input{
     background-image: url("../img/passwordIcon.png");
 }
 
+main{
+    height: calc(100% - 2em);
+    width: 20vw;
+    margin-left: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 section{
-    background-color: aliceblue;
     display: flex;
     flex-direction: column;
     width: 20vw;
-    
 }
 
 h1{
@@ -61,6 +132,26 @@ h1{
     text-align: right;
 }
 
-#buttons button{
-    width: calc(50% - 0.5em);
+#formButtons{
+    width: 100%;
+    display: flex;
+    text-align: center;
+}
+
+#formButtons a{
+    width: 50%;
+}
+
+#formButtons .formLink{
+    border: 1px solid var(--verdeIntelbras);
+    padding: 0.4em;
+    background-color: #00a335;
+}
+
+#formButtons #esq{
+    padding-right: 1em;
+}
+
+#formButtons #esq .formLink{
+    background-color: transparent;
 }

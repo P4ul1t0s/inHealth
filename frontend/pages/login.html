@@ -9,25 +9,37 @@
         <link rel="stylesheet" href="./StyleLogin.css">
     </head>
     <body id="body">
-        <!-- <div id="logo">
-            <a href="/frontend/pages/index.html"><img src="../img/logoIntelbras.png" alt="INTELBRAS"></a>
-            <div><h3>inHealth</h3></div>
-        </div> -->
-        <section>
-            <h1>Entrar</h1>
-            <p>Bem vindo(a),</p>
-            <p>Por favor entre com sua conta</p>
-            <div id="inputs">
-                <input type="email"id="email" placeholder="Email">
-                <input type="password" id="password" placeholder="Senha">
-            <p><a href="">Esqueci minha senha</a></p>
+        <nav id="navbar">
+            <div id="logo">
+                <a href="/frontend/pages/index.html"><img src="../img/logoIntelbras.png" alt="INTELBRAS"></a>
+                <div><h3>inHealth</h3></div>
             </div>
             <div id="buttons">
-                <a href="">Voltar</a>
-                <a href="">Entrar</a>
+                <img class="darkButton" src="../img/darkMode.svg" alt="darkMode" onclick="toggleMode('dark')">
+                <img class="lightButton" src="../img/lightMode.svg" alt="lightMode" onclick="toggleMode('light')">
+                <ul>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Loja</a></li>
+                </ul>
             </div>
-            <p>Não possui uma conta? <a href="">Crie uma</a></p>
-        </section>
+        </nav>
+        <main>
+            <section>
+                <h1>Entrar</h1>
+                <p>Bem vindo(a),</p>
+                <p>Por favor entre com sua conta</p>
+                <div id="inputs">
+                    <input type="email"id="email" placeholder="Email">
+                    <input type="password" id="password" placeholder="Senha">
+                <p><a href="">Esqueci minha senha</a></p>
+                </div>
+                <div id="formButtons">
+                    <a href="" id="esq"><div class="formLink">Voltar</div></a>
+                    <a href=""><div class="formLink">Entrar</div></a>
+                </div>
+                <p>Não possui uma conta? <a href="">Crie uma</a></p>
+            </section>
+        </main>
         <script src="../../backend/script.js"></script>
     </body>
 </html>
