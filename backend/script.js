@@ -28,7 +28,7 @@ function toggleMode(theme){
 
     if(theme === "dark"){
         backgruoundColor = "--cinzaEscuro"
-        borderColor = "--preto"
+        borderColor = "--cinzaClaro"
         fontColor = "--cinzaClaro"
         darkButton.style.display = 'none'
         lightButton.style.display = 'unset'

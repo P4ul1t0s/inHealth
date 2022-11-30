@@ -1,6 +1,6 @@
 :root{
     --verdeIntelbras: #00a335;
-    --cinzaClaro: #8b979f; 
+    --cinzaClaro: #CCC; 
     --cinzaEscuro: #343434;
     --preto: #222;
     --branco: #FFF;
@@ -87,11 +87,13 @@ main{
     padding-right: 0.5em;
     height: 80%;
     width: 40%;
+    /* border: 2px solid red; */
 }
 
 .right{
     padding-left: 0.5em;
     width: 60%;
+    /* border: 2px solid red; */
 }
 
 .grid{
@@ -146,7 +148,7 @@ main{
 
 #homeContent #graph{
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
 }
 
@@ -155,6 +157,21 @@ main{
     height: auto;
     background-color: #FFF;
     border-radius: 4px;
+    margin-bottom: 1em;
+}
+
+.details{
+    text-align: right;
+}
+
+.details a{
+    color: #00a335;
+    text-decoration: none;
+    font-size: 125%;
+}
+
+.details a:hover{
+    text-decoration: underline;
 }
 
 #posturaContent svg{
@@ -173,7 +190,7 @@ main{
 }
 
 #info{
-    background-color: #CCCCCC;
+    background-color: #00000020;
     border-radius: 8px;
     padding: 1em;
     width: 50%;
@@ -193,7 +210,16 @@ main{
 }
 
 .grid .sensorBox h2{
-    margin-bottom: 1em;
+}
+
+.grid .sensorBox p{
+    width: 100%;
+}
+
+.grid .sensorBox .center{
+    text-align: center;
+    font-size: 200%;
+    margin: 1em 0;
 }
 
 .grid .sensorBox strong{
