@@ -50,6 +50,10 @@ if(localStorage.getItem('button')){
     setDashboard(localStorage.getItem('button'), localStorage.getItem('dashboard'))
 }
 
+function redirect(endPoint){
+    window.location.replace(`${endPoint}.html`)
+}
+
 function redirectToSetDashboard(button, dashboard){
     localStorage.setItem('button', button);
     localStorage.setItem('dashboard', dashboard);

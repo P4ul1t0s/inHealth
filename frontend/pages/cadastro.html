@@ -6,7 +6,7 @@
         <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
         <script src="../../backend/script.js"></script>
         <link rel="stylesheet" href="./style.css">
-        <link rel="stylesheet" href="./styleLogin.css">
+        <link rel="stylesheet" href="./styleCadastro.css">
     </head>
     <body id="body">
         <nav id="navbar">
@@ -25,19 +25,20 @@
         </nav>
         <main>
             <section>
-                <h1 class="txt">Entrar</h1>
+                <h1 class="txt">Criar conta</h1>
                 <p class="txt">Bem vindo(a),</p>
-                <p class="txt">por favor, entre com sua conta</p>
+                <p class="txt">preencha os campos e crie sua conta</p>
                 <div id="inputs">
+                    <input type="text" id="name" placeholder="Nome Completo">
                     <input type="email" id="email" placeholder="Email">
                     <input type="password" id="password" placeholder="Senha">
-                    <p><a href="">Esqueci minha senha</a></p>
+                    <input type="password" id="confirmPassword" placeholder="Confirmar Senha">
                 </div>
                 <div id="formButtons">
                     <a href="./index.html" id="esq"><div class="formLink">Voltar</div></a>
-                    <a href=""><div class="formLink">Entrar</div></a>
+                    <a href=""><div class="formLink">Criar conta</div></a>
                 </div>
-                <p id="nConta">Não possui uma conta? <a href="./cadastro.html">Crie uma</a></p>
+                <p id="nConta">Já possui uma conta? <a href="./login.html">Entre aqui</a></p>
             </section>
         </main>
         <script src="../../backend/script.js"></script>

@@ -97,13 +97,18 @@ input{
     width: 100%;
 }
 
+#name{
+    background-image: url("../img/userIcon.png");
+}
+
 #email{
     background-image: url("../img/emailIcon.png");
 }
 
-#password{
+#password, #confirmPassword{
     background-image: url("../img/passwordIcon.png");
 }
+
 
 main{
     height: calc(100% - 2em);
@@ -131,28 +136,15 @@ h1{
 }
 
 #inputs{
-    margin: 2em 0 4em 0;
+    margin: 2em 0 1em 0;
 }
 
-#inputs input:first-child{
+#inputs input{
     margin-bottom: 1em;
 }
+
 #inputs input::placeholder{
     color: #8B979F;
-}
-
-#inputs p{
-    text-align: right;
-    font-size: 80%;
-    margin-top: 0.3em;
-}
-
-#inputs a{
-    color: #8B979F;
-}
-
-#inputs a:hover{
-    text-decoration: underline;
 }
 
 #formButtons{
