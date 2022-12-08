@@ -325,7 +325,7 @@ main{
 
 #config section{
     margin-left: 11em;
-    padding: 1em;
+    padding: 1em 1em 1em 2em;
 }
 
 #config #sensores{
@@ -333,9 +333,22 @@ main{
 }
 
 #configSensores{
-    display: flex;
+    display: block;
 }
 
 #configAlarmes{
     display: none;
+}
+
+.configSection div{
+    margin-bottom: 1.5em;
+}
+
+.configSection div a{
+    text-decoration: none;
+    color: #00a335;
+}
+
+.configSection div h3{
+    margin-bottom: 0.2em;
 }

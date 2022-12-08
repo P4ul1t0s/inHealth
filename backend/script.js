@@ -77,7 +77,8 @@ function setConfigSection(listItem, sectionItem){
     listItemAlarmes.style.border = 'none'
     configSensores.style.display = 'none'
     configAlarmes.style.display = 'none'
-    sectionItem.style.display = 'flex'
+    sectionItem = document.querySelector(`#${sectionItem}`)
+    sectionItem.style.display = 'block'
     listItem = document.querySelector(`#${listItem}`)
     listItem.style.borderLeft = '5px solid #00a335'
 }
