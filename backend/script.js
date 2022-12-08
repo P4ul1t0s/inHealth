@@ -16,6 +16,10 @@ var infoDistIdealSensorLombarD = document.querySelector('#infoDistIdealSensorLom
 var infoStatusSensorLombarE = document.querySelector('#sensor4Strong')
 var infoDistAtualSensorLombarE = document.querySelector('#infoDistAtualSensorLombarE')
 var infoDistIdealSensorLombarE = document.querySelector('#infoDistIdealSensorLombarE')
+var listItemSensores = document.querySelector('#sensores')
+var listItemAlarmes = document.querySelector('#alarmes')
+var configSensores = document.querySelector('#configSensores')
+var configAlarmes = document.querySelector('#configAlarmes')
 
 if(!localStorage.getItem('theme')){
     localStorage.setItem('theme', body.style.backgroundColor);
@@ -39,7 +43,6 @@ function toggleMode(theme){
         darkButton.style.display = 'unset'
         lightButton.style.display = 'none'
     }
-    // console.log(theme, backgruoundColor, borderColor, fontColor, localStorage.getItem('theme'))
     root.style.setProperty('--backgruoundColor', `var(${backgruoundColor})`);
     root.style.setProperty('--borderColor', `var(${borderColor})`);
     root.style.setProperty('--fontColor', `var(${fontColor})`);
@@ -66,6 +69,17 @@ function setDashboard(button, dashboard){
     dashboard = document.querySelector(`#${dashboard}`)
     button.style.backgroundColor = '#00000020';
     dashboard.style.display = 'block'
+}
+
+function setConfigSection(listItem, sectionItem){
+    setDashboard('botãoConfig', 'config')
+    listItemSensores.style.border = 'none'
+    listItemAlarmes.style.border = 'none'
+    configSensores.style.display = 'none'
+    configAlarmes.style.display = 'none'
+    sectionItem.style.display = 'flex'
+    listItem = document.querySelector(`#${listItem}`)
+    listItem.style.borderLeft = '5px solid #00a335'
 }
 
 function setAllNone(){

@@ -185,7 +185,18 @@
             <h1>ALERTAS</h1>
         </main>
         <main id="config">
-            <h1>CONFIGURAÇÕES</h1>
+            <aside>
+                <h2>Ergonomia</h2>
+                <a onclick="setConfigSection('sensores', 'configSensores')"><h3 id="sensores">Sensores</h3></a>
+                <a onclick="setConfigSection('alarmes', 'configAlarmes')"><h3 id="alarmes">Alarmes</h3></a>
+            </aside>
+            <section id="configSensores">
+                Sensores
+            </section>
+            </aside>
+            <section id="configAlarmes">
+                Alarmes
+            </section>
         </main>
         <secion id="modal">
            <div id="modalContent">

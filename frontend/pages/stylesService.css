@@ -40,7 +40,7 @@ div img, div a{
     margin-left: 1em;
 }
 
-aside{
+#aside{
     border-right: 2px solid var(--borderColor);
     width: 3em;
     height: 100vh;
@@ -48,18 +48,18 @@ aside{
     padding: 0.5em;
 }
 
-aside img{
+#aside img{
     width: 2em;
     padding: 0.5em;
     border-radius: 5px;
     margin-bottom: 1.5em;
 }
 
-aside #botãoHome{
+#aside #botãoHome{
     background-color: #00000020;
 }
 
-aside img:hover{
+#aside img:hover{
     cursor: pointer;
 }
 
@@ -69,6 +69,7 @@ main{
     position: fixed;
     left: 5em;
     top: 6em;
+    display: flex;
 }
 
 .title{
@@ -287,4 +288,54 @@ main{
 #modalContent #buttons #right{
     background-color: var(--modalColor);
     color: var(--branco);
+}
+
+#config aside{
+    width: fit-content;
+    height: 100%;
+    position: fixed;
+    left: 5em;
+    top: 5em;
+    display: block;
+    padding: 2em 2em 1em 1em    ;
+    border-right: 2px solid var(--borderColor);
+}
+
+#config aside h2, #config aside h3{
+    margin-bottom: 0.5em;
+    height: 1.8em;
+    display: flex;
+    align-items: center;
+}
+
+#config aside h3{
+    padding-left: 0.3em;
+    border-radius: 5px;
+}
+
+#config aside a{
+    color: var(--fontColor);
+    text-decoration: none;
+}
+
+#config aside h3:hover{
+    background-color: #00000020;
+    cursor: pointer;
+}
+
+#config section{
+    margin-left: 11em;
+    padding: 1em;
+}
+
+#config #sensores{
+    border-left: 5px solid #00a335;
+}
+
+#configSensores{
+    display: flex;
+}
+
+#configAlarmes{
+    display: none;
 }
