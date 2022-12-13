@@ -2,12 +2,14 @@
     --verdeIntelbras: #00a335;
     --cinzaClaro: #CCC; 
     --cinzaEscuro: #343434;
+    --cinzaAzul: #3E5055;
     --preto: #222;
     --branco: #FFF;
 
     --backgruoundColor: var(--branco);
     --borderColor: var(--cinzaEscuro);
     --fontColor: var(--cinzaClaro);
+    --titleColor: var(--cinzaAzul);
 
     --modalColor: red;
 }
@@ -17,7 +19,7 @@ nav{
     width: 100vw;
     padding: 1em;
     display: flex;
-    border-bottom: 2px solid var(--borderColor);
+    border-bottom: 2px solid #00000020;
 }
 
 nav div{
@@ -41,7 +43,7 @@ div img, div a{
 }
 
 aside{
-    border-right: 2px solid var(--borderColor);
+    border-right: 2px solid #00000020;
     width: 3em;
     height: 100vh;
     position: fixed;
@@ -74,7 +76,7 @@ main{
 .title{
     height: 7em;
     width: 100%;
-    color: var(--fontColor);
+    color: var(--titleColor);
 }
 
 .content{
@@ -209,9 +211,6 @@ main{
     border-radius: 8px;
 }
 
-.grid .sensorBox h2{
-}
-
 .grid .sensorBox p{
     width: 100%;
 }
@@ -239,6 +238,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    display: none;
 }
 
 #modal #modalContent{
@@ -247,6 +247,8 @@ main{
     background-color: var(--backgruoundColor);
     border: 3px solid;
     border-color: var(--modalColor);
+    border-radius: 4px;
+    padding: 1em;
 }
 
 #modalContent #text, #buttons{
@@ -257,23 +259,38 @@ main{
     height: calc(100% - 6em);
 }
 
+#modalContent #text div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+}
+
+#modalContent #text #modalImg{
+    height: 40%; 
+}
+
+#modalContent #text div h1{
+    color: var(--modalColor);
+}
+
 #modalContent #text img{
-    height: 25%
+    height: 100%;
 }
 
 #modalContent #buttons{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    height: 6em;
+    height: 7em;
 }
 
 #modalContent #buttons button{
     font-size: 1.5em;
     width: 35%;
-    padding: 0.2em;
     background-color: transparent;
     border: 3px solid var(--modalColor);
+    border-radius: 4px;
 }
 
 #modalContent #buttons button:hover{

@@ -2,6 +2,8 @@ var root = document.documentElement;
 var backgruoundColor, borderColor, fontColor;
 var darkButton = document.querySelector('.darkButton')
 var lightButton = document.querySelector('.lightButton')
+var graficoDark = document.querySelector('.graficoDark')
+var graficoLight = document.querySelector('.graficoLight')
 var home = document.querySelector('#home')
 var relatorio = document.querySelector('#relatorio')
 var infoStatusSensorPescoco = document.querySelector('#sensor1Strong')
@@ -30,20 +32,26 @@ function toggleMode(theme){
         backgruoundColor = "--cinzaEscuro"
         borderColor = "--cinzaClaro"
         fontColor = "--cinzaClaro"
+        titleColor = "--cinzaClaro"
         darkButton.style.display = 'none'
         lightButton.style.display = 'unset'
+        graficoDark.style.display = 'unset'
+        graficoLight.style.display = 'none'
     }else if(theme === "light"){
         backgruoundColor = "--branco"
         borderColor = "--cinzaEscuro"
         fontColor = "--preto"
+        titleColor = "--cinzaAzul"
         darkButton.style.display = 'unset'
         lightButton.style.display = 'none'
+        graficoDark.style.display = 'none'
+        graficoLight.style.display = 'unset'
     }
     // console.log(theme, backgruoundColor, borderColor, fontColor, localStorage.getItem('theme'))
     root.style.setProperty('--backgruoundColor', `var(${backgruoundColor})`);
     root.style.setProperty('--borderColor', `var(${borderColor})`);
     root.style.setProperty('--fontColor', `var(${fontColor})`);
-
+    root.style.setProperty('--titleColor', `var(${titleColor})`);
 }
 
 if(localStorage.getItem('button')){
