@@ -236,10 +236,10 @@ main{
     background-color: #00000060;
     position: absolute;
     top: 0;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
-    display: none;
+    /* display: none; */
 }
 
 #modal #modalContent{
@@ -364,6 +364,10 @@ main{
 .configSection div a{
     text-decoration: none;
     color: #00a335;
+}
+
+.configSection div a{
+    cursor: pointer;
 }
 
 .configSection div h3{

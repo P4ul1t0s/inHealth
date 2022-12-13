@@ -23,11 +23,11 @@
             </div>
         </nav>
         <aside id="aside">
-            <img id="botãoHome" src="../img/botãoHome.svg" alt="botãoHome" onclick="setDashboard('botãoHome', 'home')">
-            <img id="botãoPostura" src="../img/botãoPostura.svg" alt="botãoPostura" onclick="setDashboard('botãoPostura', 'postura')">
-            <img id="botãoAlertas" src="../img/botãoAlertas.svg" alt="botãoAlertas" onclick="setDashboard('botãoAlertas', 'alertas')">
-            <img id="botãoConfig" src="../img/botãoConfig.svg" alt="botãoConfig" onclick="setDashboard('botãoConfig', 'config')">
-            <a href="./index.html"><img id="botãoSair" src="../img/botãoSair.svg" alt="botãoSair"></a>
+            <img id="botãoHome" src="../img/botãoHome.svg" alt="botãoHome" onclick="redirectToSetDashboard('botãoHome', 'home')">
+            <img id="botãoPostura" src="../img/botãoPostura.svg" alt="botãoPostura" onclick="redirectToSetDashboard('botãoPostura', 'postura')">
+            <img id="botãoAlertas" src="../img/botãoAlertas.svg" alt="botãoAlertas" onclick="redirectToSetDashboard('botãoAlertas', 'alertas')">
+            <img id="botãoConfig" src="../img/botãoConfig.svg" alt="botãoConfig" onclick="redirectToSetDashboard('botãoConfig', 'config')">
+            <img id="botãoSair" src="../img/botãoSair.svg" alt="botãoSair" onclick="redirect('index')">
         </aside>
         <main id="home">
             <div class="title">
@@ -194,37 +194,37 @@
             <section id="configSensores" class="configSection">
                 <div id="sensorPescoçoConfig">
                     <h3>Sensor - Pescoço</h3>
-                    <a href="">Configurar</a>
+                    <a onclick="sensorModalActvation('Pescoço')">Configurar</a>
                 </div>
                 <div id="sensorCostasConfig">
                     <h3>Sensor - Costas</h3>
-                    <a href="">Configurar</a>
+                    <a onclick="sensorModalActvation('Costas')">Configurar</a>
                 </div>
                 <div id="sensorLombarEsquerdaConfig">
                     <h3>Sensor - Lombar Esquerda</h3>
-                    <a href="">Configurar</a>
+                    <a onclick="sensorModalActvation('Lombar Esquerda')">Configurar</a>
                 </div>
                 <div id="sensorLombarDireitaConfig">
                     <h3>Sensor - Lombar Direita</h3>
-                    <a href="">Configurar</a>
+                    <a onclick="sensorModalActvation('Lombar Direita')">Configurar</a>
                 </div>
             </section>
             <section id="configAlarmes" class="configSection">
                 <div id="sensorHidratacaoConfig">
                     <h3>Alarme - Hidratação</h3>
-                    <a href="">Configurar</a>
+                    <a onclick="alarmeModalActvation('Hidratação')">Configurar</a>
                 </div>
                 <div id="sensorPosturaConfig">
                     <h3>Alarme - Postura</h3>
-                    <a href="">Configurar</a>
+                    <a onclick="alarmeModalActvation('Postura')">Configurar</a>
                 </div>
                 <div id="sensorExercicioConfig">
                     <h3>Alarme - Exercício Físico</h3>
-                    <a href="">Configurar</a>
+                    <a onclick="alarmeModalActvation('Exercício')">Configurar</a>
                 </div>
                 <div id="sensorDescansoConfig">
                     <h3>Alarme - Descanso</h3>
-                    <a href="">Configurar</a>
+                    <a onclick="alarmeModalActvation('Descanso')">Configurar</a>
                 </div>
             </section>
         </main>
@@ -236,7 +236,7 @@
                     <div><h2>Sua mensagem vai ser exibida aqui!</h2></div>
                 </div>
                 <div id="buttons">
-                    <button id="left">Descartar</button>
+                    <button id="left" onclick="closeAlert()">Descartar</button>
                     <button id="right">Ok</button>
                 </div>
            </div>

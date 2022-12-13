@@ -18,6 +18,7 @@ var infoDistIdealSensorLombarD = document.querySelector('#infoDistIdealSensorLom
 var infoStatusSensorLombarE = document.querySelector('#sensor4Strong')
 var infoDistAtualSensorLombarE = document.querySelector('#infoDistAtualSensorLombarE')
 var infoDistIdealSensorLombarE = document.querySelector('#infoDistIdealSensorLombarE')
+var modalAlert = document.querySelector('#modal')
 var listItemSensores = document.querySelector('#sensores')
 var listItemAlarmes = document.querySelector('#alarmes')
 var configSensores = document.querySelector('#configSensores')
@@ -89,6 +90,22 @@ function setConfigSection(listItem, sectionItem){
     sectionItem.style.display = 'block'
     listItem = document.querySelector(`#${listItem}`)
     listItem.style.borderLeft = '5px solid #00a335'
+}
+
+function sensorModalActvation(alvo){
+
+}
+
+function alarmeModalActvation(alvo){
+
+}
+
+function closeModal(alvo, save){
+    
+}
+
+function closeAlert(){
+    modalAlert.style.display = 'none'
 }
 
 function setAllNone(){
