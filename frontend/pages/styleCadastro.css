@@ -1,0 +1,189 @@
+:root{
+    --verdeIntelbras: #00a335;
+    --cinzaClaro: #8b979f; 
+    --cinzaEscuro: #343434;
+    --preto: #222;
+    --branco: #FFF;
+
+    --backgruoundColor: var(--branco);
+    --borderColor: var(--cinzaEscuro);
+    --fontColor: var(--cinzaClaro);
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../img/wallpaperLogin.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    top: 50%;
+    right: -10%;
+}
+
+nav{
+    width: 100vw;
+    height: 2em;
+    position: absolute;
+    padding: 15px;
+    top: 0;
+    display: flex;
+    background-color: var(--backgruoundColor);
+    box-shadow: -1em 1em 0.5em -1.2em var(--preto);
+}
+
+nav div{
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+    color: var(--verdeIntelbras);
+}
+
+#logo{
+    width: 30%;
+}
+
+#logo img{
+    height: 1.7em;
+}
+
+#logo div{
+    margin-top: 0.6em;
+    margin-left: 0.6em;
+    align-items: center;
+    justify-content: center;
+    color: #8b979f;
+}
+
+#buttons{
+    flex-direction: row-reverse;
+    padding-top: 0.4em;
+    width: 68%;
+}
+
+#buttons a{
+    height: 100%;
+    margin-left: 1.3em;
+}
+
+#buttons a:hover{
+    color: #8b979f;
+}
+
+#buttons li{
+    list-style-type: none;
+    width: fit-content;
+    float: left;
+}
+
+#buttons img{
+    height: 2em;
+    align-self: center;
+    margin-left: 1em;
+    padding-bottom: 0.4em;
+}
+
+input{
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: transparent;
+    background-size: 1.2em;
+    background-clip: padding-box;
+    border: unset;
+    border-bottom: 2px solid var(--cinzaClaro);
+    font-size: 1em;
+    padding: 0.5em 0;
+    width: 100%;
+}
+
+#name{
+    background-image: url("../img/userIcon.png");
+}
+
+#email{
+    background-image: url("../img/emailIcon.png");
+}
+
+#password, #confirmPassword{
+    background-image: url("../img/passwordIcon.png");
+}
+
+
+main{
+    height: calc(100% - 2em);
+    width: 20vw;
+    margin-left: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+}
+
+h1{
+    margin-bottom: 0.5em;
+    font-size: 200%;
+}
+
+.txt{
+    color: #3E5055;
+    font-weight: 200;
+}
+
+#inputs{
+    margin: 2em 0 1em 0;
+}
+
+#inputs input{
+    margin-bottom: 1em;
+}
+
+#inputs input::placeholder{
+    color: #8B979F;
+}
+
+#formButtons{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+#formButtons a{
+    width: 50%;
+    color: #FFF;
+}
+
+#formButtons .formLink{
+    border: 1px solid var(--verdeIntelbras);
+    padding: 0.4em;
+    background-color: #00a335;
+    border-radius: 3px;
+}
+
+#formButtons #esq{
+    padding-right: 1em;
+    color: #00a335;
+}
+
+#formButtons #esq .formLink{
+    background-color: transparent;
+}
+
+#nConta{
+    text-align: center;
+}
+
+#nConta a{
+    color: #00a335;
+    font-weight: bold;
+}
+
+#nConta a:hover{
+    text-decoration: underline;
+}
