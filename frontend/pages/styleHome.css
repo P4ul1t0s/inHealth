@@ -120,10 +120,6 @@ section{
     margin: 2em 5em;
 }
 
-.service:hover{
-    cursor: pointer;
-}
-
 .service h2{
     margin-top: 0.5em;
     width: 20vw;
