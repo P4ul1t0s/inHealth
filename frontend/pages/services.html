@@ -228,12 +228,12 @@
                 </div>
             </section>
         </main>
-        <secion id="modal">
-           <div id="modalContent">
+        <secion class="modal" id="alertModal">
+           <div class="modalContent">
                 <div id="text">
-                    <div id="modalImg"><img src="../img/modalIconAlert.svg" alt=""></div>
+                    <div id="modalImgDiv"><img id="modalImg" src="../img/modalIconAlert.svg" alt=""></div>
                     <div><h1>ATENÇÃO!</h1></div>
-                    <div><h2>Sua mensagem vai ser exibida aqui!</h2></div>
+                    <div><h2 id="modalText">Sua mensagem vai ser exibida aqui!</h2></div>
                 </div>
                 <div id="buttons">
                     <button id="left" onclick="closeAlert()">Descartar</button>
@@ -241,6 +241,17 @@
                 </div>
            </div>
         </secion>
+        <section class="modal" id="configModal">
+            <div class="modalContent">
+                <form action="saveConfig()">
+                    <p>Nome do Alarme:</p>
+                    <input type="text" id="alarmName">
+                <form action="saveConfig()">
+                    <p>Nome do Alarme:</p>
+                    <input type="text" id="alarmName">
+                </form>
+            </div>
+        </section>
         <script src="../../backend/script.js"></script>
     </body>
 </html>

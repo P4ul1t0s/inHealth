@@ -230,7 +230,7 @@ main{
     display: none;
 }
 
-#modal{
+.modal{
     height: 100%;
     width: 100%;
     background-color: #00000060;
@@ -240,10 +240,13 @@ main{
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(4px);
-    /* display: none; */
 }
 
-#modal #modalContent{
+#alertModal{
+    display: none;
+}
+
+.modal .modalContent{
     height: 50vh;
     width: 60vh;
     background-color: var(--backgruoundColor);
@@ -253,41 +256,41 @@ main{
     padding: 1em;
 }
 
-#modalContent #text, #buttons{
+.modalContent #text, #buttons{
     width: 100%;
 }
 
-#modalContent #text{
+.modalContent #text{
     height: calc(100% - 6em);
 }
 
-#modalContent #text div{
+.modalContent #text div{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 30%;
 }
 
-#modalContent #text #modalImg{
+.modalContent #text #modalImgDiv{
     height: 40%; 
 }
 
-#modalContent #text div h1{
+.modalContent #text div h1{
     color: var(--modalColor);
 }
 
-#modalContent #text img{
+.modalContent #text img{
     height: 100%;
 }
 
-#modalContent #buttons{
+.modalContent #buttons{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     height: 7em;
 }
 
-#modalContent #buttons button{
+.modalContent #buttons button{
     font-size: 1.5em;
     width: 35%;
     background-color: transparent;
@@ -295,15 +298,15 @@ main{
     border-radius: 4px;
 }
 
-#modalContent #buttons button:hover{
+.modalContent #buttons button:hover{
     cursor: pointer;
 }
 
-#modalContent #buttons #left{
+.modalContent #buttons #left{
     color: var(--modalColor);
 }
 
-#modalContent #buttons #right{
+.modalContent #buttons #right{
     background-color: var(--modalColor);
     color: var(--branco);
 }

@@ -18,11 +18,13 @@ var infoDistIdealSensorLombarD = document.querySelector('#infoDistIdealSensorLom
 var infoStatusSensorLombarE = document.querySelector('#sensor4Strong')
 var infoDistAtualSensorLombarE = document.querySelector('#infoDistAtualSensorLombarE')
 var infoDistIdealSensorLombarE = document.querySelector('#infoDistIdealSensorLombarE')
-var modalAlert = document.querySelector('#modal')
+var modalAlert = document.querySelector('#malertModal')
 var listItemSensores = document.querySelector('#sensores')
 var listItemAlarmes = document.querySelector('#alarmes')
 var configSensores = document.querySelector('#configSensores')
 var configAlarmes = document.querySelector('#configAlarmes')
+var modalImg = document.querySelector('#modalImg')
+var modalText = document.querySelector('#modalText')
 
 if(!localStorage.getItem('theme')){
     localStorage.setItem('theme', body.style.backgroundColor);
@@ -106,6 +108,12 @@ function closeModal(alvo, save){
 
 function closeAlert(){
     modalAlert.style.display = 'none'
+}
+
+function openAlert(modalImg, modalText){
+    this.modalImg.setAttribute("src", `../img/${modalImg}.svg`);
+    this.modalText.innerHTML = modalText
+    modalAlert.style.display = 'flex'
 }
 
 function setAllNone(){
