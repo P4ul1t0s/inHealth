@@ -239,6 +239,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    backdrop-filter: blur(4px);
     /* display: none; */
 }
 
@@ -315,7 +316,7 @@ main{
     top: 5em;
     display: block;
     padding: 2em 2em 1em 1em    ;
-    border-right: 2px solid var(--borderColor);
+    border-right: 2px solid #00000020;
 }
 
 #config aside h2, #config aside h3{
@@ -366,7 +367,8 @@ main{
     color: #00a335;
 }
 
-.configSection div a{
+.configSection div a:hover{
+    text-decoration: underline;
     cursor: pointer;
 }
 
