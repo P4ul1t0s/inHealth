@@ -1,5 +1,5 @@
 var root = document.documentElement;
-var backgruoundColor, borderColor, fontColor;
+var backgruoundColor, borderColor, fontColor, modalColor;
 var darkButton = document.querySelector('.darkButton')
 var lightButton = document.querySelector('.lightButton')
 var graficoDark = document.querySelector('#graficoDark')
@@ -18,7 +18,12 @@ var infoDistIdealSensorLombarD = document.querySelector('#infoDistIdealSensorLom
 var infoStatusSensorLombarE = document.querySelector('#sensor4Strong')
 var infoDistAtualSensorLombarE = document.querySelector('#infoDistAtualSensorLombarE')
 var infoDistIdealSensorLombarE = document.querySelector('#infoDistIdealSensorLombarE')
-var modalAlert = document.querySelector('#malertModal')
+var alertModal = document.querySelector('#alertModal')
+var modalHidratacao = document.querySelector('#modalHidratacao')
+var modalDescanso = document.querySelector('#modalDescanso')
+var modalExercicio = document.querySelector('#modalExercicio')
+var configModalSensor = document.querySelector('#configModalSensor')
+var configModalAlarme = document.querySelector('#configModalAlarme')
 var listItemSensores = document.querySelector('#sensores')
 var listItemAlarmes = document.querySelector('#alarmes')
 var configSensores = document.querySelector('#configSensores')
@@ -94,16 +99,45 @@ function setConfigSection(listItem, sectionItem){
     listItem.style.borderLeft = '5px solid #00a335'
 }
 
-function sensorModalActvation(alvo){
-
+function ativarModalAlert(){
+    modalColor = '#D72735';
+    root.style.setProperty('--modalColor', modalColor);
+    alertModal.style.display = 'flex'
 }
 
-function alarmeModalActvation(alvo){
-
+function ativarModalHidratacao(){
+    modalColor = '#27BDBE';
+    root.style.setProperty('--modalColor', modalColor);
+    modalHidratacao.style.display = 'flex'
 }
 
-function closeModal(alvo, save){
-    
+function ativarModalDescanso(){
+    modalColor = '#EAB42A';
+    root.style.setProperty('--modalColor', modalColor);
+    modalDescanso.style.display = 'flex'
+}
+
+function ativarModalExercicio(){
+    modalColor = '#EAB42A';
+    root.style.setProperty('--modalColor', modalColor);
+    modalExercicio.style.display = 'flex'
+}
+
+function closeModal(){
+    alertModal.style.display = 'none'
+    modalHidratacao.style.display = 'none'
+    modalDescanso.style.display = 'none'
+    modalExercicio.style.display = 'none'
+    configModalSensor.style.display = 'none'
+    configModalAlarme.style.display = 'none'
+}
+
+function sensorModalActvation(sensor){
+    configModalSensor.style.display = 'flex'
+}
+
+function alarmeModalActvation(alarme){
+    configModalAlarme.style.display = 'flex'
 }
 
 function closeAlert(){

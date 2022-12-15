@@ -183,7 +183,14 @@
             </div>
         </main>
         <main id="alertas">
-            <h1>ALERTAS</h1>
+            <div class="title">
+                <h1>Exemplos de Alertas</h1>
+                <h3>&emsp;Teste alguns dos alertas que desenvolvemos =]</h2>
+            </div>
+            <button class="modalButton" onclick="ativarModalAlert()">ativarModalAlert</button>
+            <button class="modalButton" onclick="ativarModalHidratacao()">ativarModalHidratacao</button>
+            <button class="modalButton" onclick="ativarModalDescanso()">ativarModalDescanso</button>
+            <button class="modalButton" onclick="ativarModalExercicio()">ativarModalExercicio</button>
         </main>
         <main id="config">
             <aside>
@@ -233,23 +240,101 @@
                 <div id="text">
                     <div id="modalImgDiv"><img id="modalImg" src="../img/modalIconAlert.svg" alt=""></div>
                     <div><h1>ATENÇÃO!</h1></div>
-                    <div><h2 id="modalText">Sua mensagem vai ser exibida aqui!</h2></div>
+                    <div><h2 id="modalText">Posição incorreta da Lombar Esquerda</h2></div>
                 </div>
                 <div id="buttons">
-                    <button id="left" onclick="closeAlert()">Descartar</button>
-                    <button id="right">Ok</button>
+                    <button id="left" onclick="closeModal()">Descartar</button>
+                    <button id="right" onclick="closeModal()">Ok</button>
                 </div>
            </div>
         </secion>
-        <section class="modal" id="configModal">
+        <secion class="modal" id="modalHidratacao">
+           <div class="modalContent">
+                <div id="text">
+                    <div id="modalImgDiv"><img id="modalImg" src="../img/Hidratacao.svg" alt=""></div>
+                    <div><h1>ATENÇÃO!</h1></div>
+                    <div><h2 id="modalText">Hidrate-se</h2></div>
+                </div>
+                <div id="buttons">
+                    <button id="left" onclick="closeModal()">Descartar</button>
+                    <button id="right" onclick="closeModal()">Ok</button>
+                </div>
+           </div>
+        </secion>
+        <secion class="modal" id="modalDescanso">
+           <div class="modalContent">
+                <div id="text">
+                    <div id="modalImgDiv"><img id="modalImg" src="../img/Descanso.svg" alt=""></div>
+                    <div><h1>ATENÇÃO!</h1></div>
+                    <div><h2 id="modalText">Pause para descansar</h2></div>
+                </div>
+                <div id="buttons">
+                    <button id="left" onclick="closeModal()">Descartar</button>
+                    <button id="right" onclick="closeModal()">Ok</button>
+                </div>
+           </div>
+        </secion>
+        <secion class="modal" id="modalExercicio">
+           <div class="modalContent">
+                <div id="text">
+                    <div id="modalImgDiv"><img id="modalImg" src="../img/Exercicio.svg" alt=""></div>
+                    <div><h1>ATENÇÃO!</h1></div>
+                    <div><h2 id="modalText">Exercite-se</h2></div>
+                </div>
+                <div id="buttons">
+                    <button id="left" onclick="closeModal()">Descartar</button>
+                    <button id="right" onclick="closeModal()">Ok</button>
+                </div>
+           </div>
+        </secion>
+        <section class="modal" id="configModalSensor">
             <div class="modalContent">
-                <form action="saveConfig()">
+                <div id="textModal">
+                    <h1>Configurar Sensor</h1>
+                    <p>Nome do Sensor:</p>
+                    <input type="text" id="sensorName" placeholder="Sensor 01">
+                    <p>Número do Sensor:</p>
+                    <input type="text" id="sensorNum" list="optionsSensor" placeholder="01">
+                    <datalist id="optionsSensor">
+                        <option value="01">Sensor Número:</option>
+                        <option value="02">Sensor Número:</option>
+                        <option value="03">Sensor Número:</option>
+                        <option value="04">Sensor Número:</option>
+                    </datalist>
+                    <p>Som:</p>
+                    <input type="checkbox" id="checkBoxSensor">
+                    <label for="checkBoxSensor">Padrão da aplicação</label>
+                    <a href="">Personalizar</a>
+                </div>
+                <div id="buttons">
+                    <button id="left" onclick="closeModal()">Cancelar</button>
+                    <button id="modalbutton" onclick="closeModal()">Salvar</button>
+                </div>
+            </div>
+        </section>
+        <section class="modal" id="configModalAlarme">
+            <div class="modalContent">
+                <div id="textModal">
+                    <h1>Configurar Alarme</h1>
                     <p>Nome do Alarme:</p>
-                    <input type="text" id="alarmName">
-                <form action="saveConfig()">
-                    <p>Nome do Alarme:</p>
-                    <input type="text" id="alarmName">
-                </form>
+                    <input type="text" id="alarmName" placeholder="Alarme 01">
+                    <p>Tipo do Alarme:</p>
+                    <input type="text" id="alarmType" list="optionsAlarme" placeholder="Hidratação">
+                    <datalist id="optionsAlarme">
+                        <option value="Hidratação">Alarme de:</option>
+                        <option value="Postura">Alarme de:</option>
+                        <option value="Exercício">Alarme de:</option>
+                        <option value="Descanso">Alarme de:</option>
+                    </datalist>
+                    <p>Horário de notificação:</p>
+                    <input type="checkbox" id="checkBoxAlarme">
+                    <label for="checkBoxAlarme">Padrão da aplicação</label>
+                    <a href="">Personalizar</a>
+                </div>
+                <div id="buttons">
+                    <button id="left" onclick="closeModal()">Cancelar</button>
+                    <button id="modalbutton" onclick="closeModal()">Salvar</button>
+                </div>
             </div>
         </section>
         <script src="../../backend/script.js"></script>
